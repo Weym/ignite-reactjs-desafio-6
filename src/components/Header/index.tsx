@@ -6,23 +6,28 @@ import { FiChevronLeft } from "react-icons/fi";
 export function Header(): JSX.Element {
   const router = useRouter();
 
-  const homePath = router.asPath === "/";
+  const homePath = false;
   return (
     <Flex
-      maxWidth="1300px"
+      maxWidth={["343px", "1200px"]}
       mx="auto"
       w="100%"
       as="nav"
       align="center"
-      height="100"
+      height={["50px", "100px"]}
     >
       {!homePath && (
-        <Box justifyContent="flex-start" cursor="pointer">
-          <FiChevronLeft size={32} />
+        <Box w={["16px", "32px"]} justifyContent="flex-start" cursor="pointer">
+          <FiChevronLeft size={"100%"} />
         </Box>
       )}
 
-      <Image margin="0 auto" src="/images/logo.svg" alt="logo" />
+      <Image
+        width={["81px", "184px"]}
+        margin="0 auto"
+        src="/images/logo.svg"
+        alt="logo"
+      />
     </Flex>
   );
 }
