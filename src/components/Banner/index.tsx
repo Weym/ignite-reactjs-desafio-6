@@ -12,7 +12,7 @@ export function Banner(): JSX.Element {
     >
       <Flex width="100%" maxW="1160px">
         <Flex justify={["center", "space-between"]} align="center" w="99%">
-          <Box>
+          <Box padding="20px">
             <Heading
               color="gray.100"
               fontWeight="500"
