@@ -12,6 +12,7 @@ export function TravelTypes(): JSX.Element {
       align="center"
       justify={["center", "center", "center", "space-between", "space-between"]}
       flexWrap="wrap"
+      height="100%"
     >
       <TravelType icon="cocktail" text="vida noturna" />
       <TravelType icon="surf" text="praia" />

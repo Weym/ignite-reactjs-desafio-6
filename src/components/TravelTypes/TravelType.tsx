@@ -14,16 +14,24 @@ export function TravelType({ icon, text }: TravelTypeProps): JSX.Element {
       align="center"
       flexBasis="1"
       mb="6"
-      minWidth={["90px", "175px"]}
+      minWidth={["105px", "175px"]}
     >
       {isMobileResolution ? (
-        <Image w="85px" h="85px" src={`images/${icon}.svg`} mb="24px" />
+        <Image
+          w={["55px", "55px", "55px", "85px"]}
+          src={`images/${icon}.svg`}
+          mb="24px"
+        />
       ) : (
         <Text color="yellow.400" fontSize="3xl" mr="2">
           ●
         </Text>
       )}
-      <Text fontSize={["md", "xl", "2xl"]} color="gray.700" fontWeight="600">
+      <Text
+        fontSize={["md", "md", "xl", "2xl"]}
+        color="gray.700"
+        fontWeight="600"
+      >
         {text}
       </Text>
     </Flex>
