@@ -30,7 +30,7 @@ export function TravelType({ icon, text }: TravelTypeProps): JSX.Element {
       <Text
         fontSize={["md", "md", "xl", "2xl"]}
         color="gray.700"
-        fontWeight="600"
+        fontWeight="500"
       >
         {text}
       </Text>
