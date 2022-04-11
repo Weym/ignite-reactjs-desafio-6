@@ -6,7 +6,8 @@ import { FiChevronLeft } from "react-icons/fi";
 export function Header(): JSX.Element {
   const router = useRouter();
 
-  const homePath = false;
+  const isHomePath = router.asPath === "/";
+
   return (
     <Flex
       maxWidth={["343px", "1200px"]}
@@ -16,7 +17,7 @@ export function Header(): JSX.Element {
       align="center"
       height={["50px", "100px"]}
     >
-      {!homePath && (
+      {!isHomePath && (
         <Box w={["16px", "32px"]} justifyContent="flex-start" cursor="pointer">
           <FiChevronLeft size={"100%"} />
         </Box>
