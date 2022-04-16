@@ -1,4 +1,5 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { FiChevronLeft } from "react-icons/fi";
@@ -19,7 +20,9 @@ export function Header(): JSX.Element {
     >
       {!isHomePath && (
         <Box w={["16px", "32px"]} justifyContent="flex-start" cursor="pointer">
-          <FiChevronLeft size={"100%"} />
+          <Link href="/">
+            <FiChevronLeft size={"100%"} />
+          </Link>
         </Box>
       )}
 
