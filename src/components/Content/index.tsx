@@ -1,10 +1,12 @@
-import { Flex, Grid, Heading, Text } from "@chakra-ui/react";
+import { Flex, Grid, Heading, HStack, Text, Tooltip } from "@chakra-ui/react";
+import { FiInfo } from "react-icons/fi";
 
 export function Content(): JSX.Element {
   return (
     <Grid
       templateColumns={["1fr", "1fr", "1fr 1fr", "1.2fr 1fr"]}
-      gap={[5, 10, 16, 20]}
+      gap={[3, 8, 16, 20]}
+      marginY={["24px", "48px", "64px", "80px"]}
     >
       <Text
         fontSize={["sm", "md", "lg", "2xl"]}
@@ -23,7 +25,6 @@ export function Content(): JSX.Element {
         minWidth={["200", "240", "340px"]}
         align="center"
         justify="space-between"
-        marginTop="16px"
       >
         <Flex direction="column" align={["flex-start", "flex-start", "center"]}>
           <Heading
@@ -65,13 +66,24 @@ export function Content(): JSX.Element {
           >
             27
           </Heading>
-          <Text
-            color="gray.700"
-            fontSize={["lg", "xl", "2xl"]}
-            fontWeight={["400", "600"]}
-          >
-            cidades +100
-          </Text>
+          <HStack spacing="5px">
+            <Text
+              color="gray.700"
+              fontSize={["lg", "xl", "2xl"]}
+              fontWeight={["400", "600"]}
+            >
+              cidades +100
+            </Text>
+            <Tooltip
+              label="Londres, Paris, Roma, Praga, Amsterdã"
+              fontSize="md"
+              aria-label="A tooltip"
+              placement="bottom-start"
+              shouldWrapChildren
+            >
+              <FiInfo />
+            </Tooltip>
+          </HStack>
         </Flex>
       </Flex>
     </Grid>
