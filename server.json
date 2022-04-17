@@ -1,0 +1,227 @@
+{
+  "continents": [
+    {
+      "id": "africa",
+      "name": "África",
+      "short_description": "Natureza.",
+      "full_description": "O terceiro maior continente, com incontáveis riquezas naturais e culturais",
+      "image": "/images/africas.jpg",
+      "citiesOnTheTop100": 9,
+      "countries": 54,
+      "languages": 11,
+      "featuredCities": [
+        {
+          "id": 1,
+          "name": "Joanesburgo",
+          "country": "África do Sul",
+          "flagUrl": "/images/southafrica.svg",
+          "image": "/images/johannesburg.jpg"
+        },
+        {
+          "name": "Cairo",
+          "country": "Egito",
+          "flagUrl": "/images/egypt.svg",
+          "image": "/images/cairo.jpg"
+        }
+      ]
+    },
+    {
+      "id": "america",
+      "name": "América",
+      "short_description": "O novo mundo.",
+      "full_description": "O maior continente em extenção norte-sul, ocupando todas as faixas climáticas do planeta",
+      "image": "/images/americas.jpg",
+      "citiesOnTheTop100": 13,
+      "countries": 35,
+      "languages": 5,
+      "featuredCities": [
+        {
+          "name": "Miami",
+          "country": "Estados Unidos",
+          "flagUrl": "/images/unitedstates.svg",
+          "image": "/images/miami.jpg"
+        },
+        {
+          "name": "Las Vegas",
+          "country": "Estados Unidos",
+          "flagUrl": "/images/unitedstates.svg",
+          "image": "/images/lasvegas.jpg"
+        },
+        {
+          "name": "New York",
+          "country": "Estados Unidos",
+          "flagUrl": "/images/unitedstates.svg",
+          "image": "/images/newyork.jpg"
+        },
+        {
+          "name": "Cancún",
+          "country": "México",
+          "flagUrl": "/images/mexico.svg",
+          "image": "/images/cancun.jpg"
+        },
+        {
+          "name": "Rio de Janeiro",
+          "country": "Brasil",
+          "flagUrl": "/images/brazil.svg",
+          "image": "/images/riodejaneiro.jpg"
+        },
+        {
+          "name": "Lima",
+          "country": "Peru",
+          "flagUrl": "/images/peru.svg",
+          "image": "/images/lima.jpg"
+        },
+        {
+          "name": "Buenos Aires",
+          "country": "Argentina",
+          "flagUrl": "/images/argentina.svg",
+          "image": "/images/buenosaires.jpg"
+        }
+      ]
+    },
+    {
+      "id": "asia",
+      "name": "Ásia",
+      "short_description": "O maior continente.",
+      "full_description": "A Ásia é o maior continente, tanto em área (chega a quase um terço de todas as terras emersas do nosso planeta) como em população, onde habitam aproximadamente 4,5 bilhões de habitantes",
+      "image": "/images/americas.jpg",
+      "citiesOnTheTop100": 43,
+      "countries": 48,
+      "languages": 2300,
+      "featuredCities": [
+        {
+          "name": "Hong Kong",
+          "country": "Hong Kong",
+          "flagUrl": "/images/hongkong.svg",
+          "image": "/images/hongkong.jpg"
+        },
+        {
+          "name": "Bangkok",
+          "country": "Tailândia",
+          "flagUrl": "/images/thailand.svg",
+          "image": "/images/bangkok.jpg"
+        },
+        {
+          "name": "Macau",
+          "country": "Macau",
+          "flagUrl": "/images/macau.svg",
+          "image": "/images/macau.jpg"
+        },
+        {
+          "name": "Singapura",
+          "country": "Singapura",
+          "flagUrl": "/images/singapore.svg",
+          "image": "/images/singapore.jpg"
+        },
+        {
+          "name": "Dubai",
+          "country": "Emirados Árabes Unidos",
+          "flagUrl": "/images/unitedarabemirates.svg",
+          "image": "/images/dubai.jpg"
+        },
+        {
+          "name": "Deli",
+          "country": "Índia",
+          "flagUrl": "/images/india.svg",
+          "image": "/images/delhi.jpg"
+        },
+        {
+          "name": "Antália",
+          "country": "Turquia",
+          "flagUrl": "/images/turkey.svg",
+          "image": "/images/antalya.jpg"
+        },
+        {
+          "name": "Taipé",
+          "country": "Taiwan",
+          "flagUrl": "/images/taiwan.svg",
+          "image": "/images/taipei.jpg"
+        },
+        {
+          "name": "Meca",
+          "country": "Arábia Saudita",
+          "flagUrl": "/images/saudiarabia.svg",
+          "image": "/images/mecca.jpg"
+        }
+      ]
+    },
+    {
+      "id": "europa",
+      "name": "Europa",
+      "short_description": "O continente mais antigo.",
+      "full_description": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
+      "image": "/images/europe.jpg",
+      "citiesOnTheTop100": 32,
+      "countries": 44,
+      "languages": 24,
+      "featuredCities": [
+        {
+          "name": "Londres",
+          "country": "Reino Unido",
+          "flagUrl": "/images/unitedkingdom.svg",
+          "image": "/images/london.jpg"
+        },
+        {
+          "name": "París",
+          "country": "França",
+          "flagUrl": "/images/france.svg",
+          "image": "/images/paris.jpg"
+        },
+        {
+          "name": "Roma",
+          "country": "Itália",
+          "flagUrl": "/images/italy.svg",
+          "image": "/images/rome.jpg"
+        },
+        {
+          "name": "Amsterdã",
+          "country": "Países Baixos",
+          "flagUrl": "/images/netherlands.svg",
+          "image": "/images/amsterdam.jpg"
+        },
+        {
+          "name": "Praga",
+          "country": "República Tcheca",
+          "flagUrl": "/images/czechrepublic.svg",
+          "image": "/images/prague.jpg"
+        },
+        {
+          "name": "Atenas",
+          "country": "Grécia",
+          "flagUrl": "/images/greece.svg",
+          "image": "/images/athens.jpg"
+        }
+      ]
+    },
+    {
+      "id": "oceania",
+      "name": "Oceania",
+      "short_description": "O menor continente.",
+      "full_description": "A Oceania é o menor continente da Terra, sendo em maior parte composta pela Austrália, principal e mais desenvolvido país da região. A Oceania é um continente localizado a sudeste da Ásia, compreendendo um conjunto de ilhas somado à Austrália, essa última considerada como uma massa continental chamada de “Australásia”",
+      "image": "/images/sydney.jpg",
+      "citiesOnTheTop100": 3,
+      "countries": 14,
+      "languages": 10,
+      "featuredCities": [
+        {
+          "name": "Sydney",
+          "country": "Austrália",
+          "flagUrl": "/images/australia.svg",
+          "image": ""
+        },
+        {
+          "name": "Melbourne",
+          "country": "Austrália",
+          "flagUrl": "/images/australia.svg",
+          "image": ""
+        },
+        {
+          "name": "Auckland",
+          "country": "Nova Zelândia",
+          "flagUrl": "/images/nrezealand.svg",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
