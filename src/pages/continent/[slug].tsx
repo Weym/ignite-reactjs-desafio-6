@@ -8,11 +8,34 @@ import { ContinentBanner } from "../../components/ContinentBanner";
 import { Header } from "../../components/Header";
 import { GetStaticPaths, GetStaticProps } from "next";
 
-export default function Continent() {
+interface City {
+  name: string;
+  country: string;
+  flagUrl: string;
+  image: string;
+}
+
+interface Continent {
+  id: string;
+  name: string;
+  short_description: string;
+  full_description: string;
+  image: string;
+  citiesOnTheTop100: number;
+  countries: number;
+  languages: number;
+  featuredCities: City[];
+}
+
+interface ContinentProps {
+  continent: Continent;
+}
+
+export default function Continent({ continent }: ContinentProps) {
   return (
     <Flex direction="column" align="center">
       <Header />
-      <ContinentBanner />
+      <ContinentBanner name={continent.name} banner={continent.image} />
       <Flex maxWidth="1160px" direction="column">
         <Content />
         <Cities />
