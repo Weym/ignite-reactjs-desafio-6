@@ -5,7 +5,7 @@
       "name": "África",
       "short_description": "Natureza.",
       "full_description": "O terceiro maior continente, com incontáveis riquezas naturais e culturais",
-      "image": "/images/africas.jpg",
+      "image": "/images/africa.jpg",
       "citiesOnTheTop100": 9,
       "countries": 54,
       "languages": 11,
@@ -84,7 +84,7 @@
       "name": "Ásia",
       "short_description": "O maior continente.",
       "full_description": "A Ásia é o maior continente, tanto em área (chega a quase um terço de todas as terras emersas do nosso planeta) como em população, onde habitam aproximadamente 4,5 bilhões de habitantes",
-      "image": "/images/americas.jpg",
+      "image": "/images/asia.jpg",
       "citiesOnTheTop100": 43,
       "countries": 48,
       "languages": 2300,
@@ -198,7 +198,7 @@
       "name": "Oceania",
       "short_description": "O menor continente.",
       "full_description": "A Oceania é o menor continente da Terra, sendo em maior parte composta pela Austrália, principal e mais desenvolvido país da região. A Oceania é um continente localizado a sudeste da Ásia, compreendendo um conjunto de ilhas somado à Austrália, essa última considerada como uma massa continental chamada de “Australásia”",
-      "image": "/images/sydney.jpg",
+      "image": "/images/oceania.jpg",
       "citiesOnTheTop100": 3,
       "countries": 14,
       "languages": 10,
@@ -207,19 +207,19 @@
           "name": "Sydney",
           "country": "Austrália",
           "flagUrl": "/images/australia.svg",
-          "image": ""
+          "image": "/images/sydney.jpg"
         },
         {
           "name": "Melbourne",
           "country": "Austrália",
           "flagUrl": "/images/australia.svg",
-          "image": ""
+          "image": "/images/melbourne.jpg"
         },
         {
           "name": "Auckland",
           "country": "Nova Zelândia",
-          "flagUrl": "/images/nrezealand.svg",
-          "image": ""
+          "flagUrl": "/images/newzealand.svg",
+          "image": "/images/auckland.jpg"
         }
       ]
     }
