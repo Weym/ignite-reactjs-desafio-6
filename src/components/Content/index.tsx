@@ -1,7 +1,38 @@
 import { Flex, Grid, Heading, HStack, Text, Tooltip } from "@chakra-ui/react";
 import { FiInfo } from "react-icons/fi";
 
-export function Content(): JSX.Element {
+interface City {
+  name: string;
+  country: string;
+  flagUrl: string;
+  image: string;
+}
+
+interface Continent {
+  id: string;
+  name: string;
+  short_description: string;
+  full_description: string;
+  image: string;
+  citiesOnTheTop100: number;
+  countries: number;
+  languages: number;
+  featuredCities: City[];
+}
+
+interface ContentProps {
+  continent: Continent;
+}
+
+export function Content({ continent }: ContentProps): JSX.Element {
+  console.log(continent);
+  const { citiesOnTheTop100, countries, full_description, languages } =
+    continent;
+
+  function featuredCityNames() {
+    return continent.featuredCities.map((city) => city.name).join(", ");
+  }
+
   return (
     <Grid
       templateColumns={["1fr", "1fr", "1fr 1fr", "1.2fr 1fr"]}
@@ -15,10 +46,7 @@ export function Content(): JSX.Element {
         flex="1"
         minWidth={["200px", "350px", "350px", "480px"]}
       >
-        A Europa é, por convenção, um dos seis continentes do mundo.
-        Compreendendo a península ocidental da Eurásia, a Europa geralmente
-        divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
-        rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+        {full_description}
       </Text>
       <Flex
         flex="1"
@@ -32,7 +60,7 @@ export function Content(): JSX.Element {
             fontSize={["2xl", "3xl", "4xl"]}
             fontWeight="600"
           >
-            50
+            {countries}
           </Heading>
           <Text
             color="gray.700"
@@ -48,7 +76,7 @@ export function Content(): JSX.Element {
             fontSize={["2xl", "3xl", "4xl"]}
             fontWeight="600"
           >
-            60
+            {languages}
           </Heading>
           <Text
             color="gray.700"
@@ -64,7 +92,7 @@ export function Content(): JSX.Element {
             fontSize={["2xl", "3xl", "4xl"]}
             fontWeight="600"
           >
-            27
+            {citiesOnTheTop100}
           </Heading>
           <HStack spacing="5px">
             <Text
@@ -75,7 +103,7 @@ export function Content(): JSX.Element {
               cidades +100
             </Text>
             <Tooltip
-              label="Londres, Paris, Roma, Praga, Amsterdã"
+              label={featuredCityNames()}
               fontSize="md"
               aria-label="A tooltip"
               placement="bottom-start"

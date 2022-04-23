@@ -1,16 +1,18 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  Heading,
-  HStack,
-  Image,
-  Text,
-  Tooltip,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { FiInfo } from "react-icons/fi";
 
-export function Cities(): JSX.Element {
+interface City {
+  name: string;
+  country: string;
+  flagUrl: string;
+  image: string;
+}
+
+interface CitiesProps {
+  cities: City[];
+}
+
+export function Cities({ cities }: CitiesProps): JSX.Element {
   return (
     <Flex direction="column" marginBottom={["5px", "35px"]}>
       <Heading
@@ -24,244 +26,41 @@ export function Cities(): JSX.Element {
         flexWrap="wrap"
         justify={["center", "center", "center", "start"]}
       >
-        <Box borderTopRadius="4px" overflow="hidden" minWidth="256px">
-          <Image src="/images/london.jpg" height="173px" width="100%" />
-          <Flex
-            border="1px"
-            borderColor="yellow.300"
-            paddingX="24px"
-            paddingY="20px"
-            justify="space-between"
-          >
-            <Flex direction="column">
-              <Heading
-                fontSize="xl"
-                fontWeight="600"
-                marginBottom="12px"
-                lineHeight="25px"
+        {cities.map((city) => {
+          const { country, flagUrl, image, name } = city;
+          return (
+            <Box borderTopRadius="4px" overflow="hidden" width="256px">
+              <Image src={image} height="173px" width="100%" />
+              <Flex
+                border="1px"
+                borderColor="yellow.300"
+                paddingX="24px"
+                paddingY="20px"
+                justify="space-between"
               >
-                Londres
-              </Heading>
-              <Text
-                fontSize="md"
-                fontWeight="500"
-                color="gray.500"
-                lineHeight="26px"
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-            <Image
-              src="/images/unitedkingdom.svg"
-              height="30px"
-              marginY="auto"
-            />
-          </Flex>
-        </Box>
-        <Box borderTopRadius="4px" overflow="hidden" minWidth="256px">
-          <Image src="/images/london.jpg" height="173px" width="100%" />
-          <Flex
-            border="1px"
-            borderColor="yellow.300"
-            paddingX="24px"
-            paddingY="20px"
-            justify="space-between"
-          >
-            <Flex direction="column">
-              <Heading
-                fontSize="xl"
-                fontWeight="600"
-                marginBottom="12px"
-                lineHeight="25px"
-              >
-                Londres
-              </Heading>
-              <Text
-                fontSize="md"
-                fontWeight="500"
-                color="gray.500"
-                lineHeight="26px"
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-            <Image
-              src="/images/unitedkingdom.svg"
-              height="30px"
-              marginY="auto"
-            />
-          </Flex>
-        </Box>
-        <Box borderTopRadius="4px" overflow="hidden" minWidth="256px">
-          <Image src="/images/london.jpg" height="173px" width="100%" />
-          <Flex
-            border="1px"
-            borderColor="yellow.300"
-            paddingX="24px"
-            paddingY="20px"
-            justify="space-between"
-          >
-            <Flex direction="column">
-              <Heading
-                fontSize="xl"
-                fontWeight="600"
-                marginBottom="12px"
-                lineHeight="25px"
-              >
-                Londres
-              </Heading>
-              <Text
-                fontSize="md"
-                fontWeight="500"
-                color="gray.500"
-                lineHeight="26px"
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-            <Image
-              src="/images/unitedkingdom.svg"
-              height="30px"
-              marginY="auto"
-            />
-          </Flex>
-        </Box>
-        <Box borderTopRadius="4px" overflow="hidden" minWidth="256px">
-          <Image src="/images/london.jpg" height="173px" width="100%" />
-          <Flex
-            border="1px"
-            borderColor="yellow.300"
-            paddingX="24px"
-            paddingY="20px"
-            justify="space-between"
-          >
-            <Flex direction="column">
-              <Heading
-                fontSize="xl"
-                fontWeight="600"
-                marginBottom="12px"
-                lineHeight="25px"
-              >
-                Londres
-              </Heading>
-              <Text
-                fontSize="md"
-                fontWeight="500"
-                color="gray.500"
-                lineHeight="26px"
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-            <Image
-              src="/images/unitedkingdom.svg"
-              height="30px"
-              marginY="auto"
-            />
-          </Flex>
-        </Box>
-        <Box borderTopRadius="4px" overflow="hidden" minWidth="256px">
-          <Image src="/images/london.jpg" height="173px" width="100%" />
-          <Flex
-            border="1px"
-            borderColor="yellow.300"
-            paddingX="24px"
-            paddingY="20px"
-            justify="space-between"
-          >
-            <Flex direction="column">
-              <Heading
-                fontSize="xl"
-                fontWeight="600"
-                marginBottom="12px"
-                lineHeight="25px"
-              >
-                Londres
-              </Heading>
-              <Text
-                fontSize="md"
-                fontWeight="500"
-                color="gray.500"
-                lineHeight="26px"
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-            <Image
-              src="/images/unitedkingdom.svg"
-              height="30px"
-              marginY="auto"
-            />
-          </Flex>
-        </Box>
-        <Box borderTopRadius="4px" overflow="hidden" minWidth="256px">
-          <Image src="/images/london.jpg" height="173px" width="100%" />
-          <Flex
-            border="1px"
-            borderColor="yellow.300"
-            paddingX="24px"
-            paddingY="20px"
-            justify="space-between"
-          >
-            <Flex direction="column">
-              <Heading
-                fontSize="xl"
-                fontWeight="600"
-                marginBottom="12px"
-                lineHeight="25px"
-              >
-                Londres
-              </Heading>
-              <Text
-                fontSize="md"
-                fontWeight="500"
-                color="gray.500"
-                lineHeight="26px"
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-            <Image
-              src="/images/unitedkingdom.svg"
-              height="30px"
-              marginY="auto"
-            />
-          </Flex>
-        </Box>
-        <Box borderTopRadius="4px" overflow="hidden" minWidth="256px">
-          <Image src="/images/london.jpg" height="173px" width="100%" />
-          <Flex
-            border="1px"
-            borderColor="yellow.300"
-            paddingX="24px"
-            paddingY="20px"
-            justify="space-between"
-          >
-            <Flex direction="column">
-              <Heading
-                fontSize="xl"
-                fontWeight="600"
-                marginBottom="12px"
-                lineHeight="25px"
-              >
-                Londres
-              </Heading>
-              <Text
-                fontSize="md"
-                fontWeight="500"
-                color="gray.500"
-                lineHeight="26px"
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-            <Image
-              src="/images/unitedkingdom.svg"
-              height="30px"
-              marginY="auto"
-            />
-          </Flex>
-        </Box>
+                <Flex direction="column">
+                  <Heading
+                    fontSize="xl"
+                    fontWeight="600"
+                    marginBottom="12px"
+                    lineHeight="25px"
+                  >
+                    {name}
+                  </Heading>
+                  <Text
+                    fontSize="md"
+                    fontWeight="500"
+                    color="gray.500"
+                    lineHeight="26px"
+                  >
+                    {country}
+                  </Text>
+                </Flex>
+                <Image src={flagUrl} height="30px" marginY="auto" />
+              </Flex>
+            </Box>
+          );
+        })}
       </Flex>
     </Flex>
   );

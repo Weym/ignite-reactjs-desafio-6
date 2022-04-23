@@ -37,8 +37,8 @@ export default function Continent({ continent }: ContinentProps) {
       <Header />
       <ContinentBanner name={continent.name} banner={continent.image} />
       <Flex maxWidth="1160px" direction="column">
-        <Content />
-        <Cities />
+        <Content continent={continent} />
+        <Cities cities={continent.featuredCities} />
       </Flex>
     </Flex>
   );
