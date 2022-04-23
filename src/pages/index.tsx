@@ -1,33 +1,52 @@
-import type { NextPage } from "next";
 import { Flex, Heading } from "@chakra-ui/react";
-import Head from "next/head";
+
+import { GetStaticProps } from "next";
+
+import api from "../services/api";
+
 import { Banner } from "../components/Banner";
 import { Carousel } from "../components/Carousel";
 import { Divider } from "../components/Divider";
 import { Header } from "../components/Header";
 import { TravelTypes } from "../components/TravelTypes";
 
-const Home: NextPage = () => {
+interface City {
+  name: string;
+  country: string;
+  flagUrl: string;
+  image: string;
+}
+
+interface Continent {
+  id: string;
+  name: string;
+  short_description: string;
+  full_description: string;
+  image: string;
+  citiesOnTheTop100: number;
+  countries: number;
+  languages: number;
+  featuredCities: City[];
+}
+
+interface IHomeProps {
+  continents: Continent[];
+}
+
+export default function Home({ continents }: IHomeProps) {
   return (
     <Flex direction="column">
       <Header />
       <Banner />
       <TravelTypes />
       <Divider />
-      <Heading
-        marginY={["24px", "52px"]}
-        marginX="auto"
-        fontWeight="500"
-        textAlign="center"
-        fontSize={["lg", "3xl", "4xl"]}
-      >
-        Vamos nessa?
-        <br />
-        Então escolha seu continente
-      </Heading>
-      <Carousel />
+      <Carousel continents={continents} />
     </Flex>
   );
-};
+}
 
-export default Home;
+export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await api.get("continents");
+
+  return { props: { continents: data } };
+};
