@@ -4,6 +4,7 @@ interface ContinentBannerProps {
   banner: string;
   name: string;
 }
+
 export function ContinentBanner({
   banner,
   name,

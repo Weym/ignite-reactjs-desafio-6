@@ -1,20 +1,13 @@
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+import { Flex, Heading, Text } from "@chakra-ui/react";
+
+import { Continent } from "../../@interfaces/continent";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-import { Pagination, Navigation } from "swiper";
-
-import { Flex, Heading, Text } from "@chakra-ui/react";
-import Link from "next/link";
-
-interface Continent {
-  id: string;
-  name: string;
-  image: string;
-  short_description: string;
-}
 
 interface CarouselProps {
   continents: Continent[];

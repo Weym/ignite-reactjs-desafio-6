@@ -2,6 +2,8 @@ import { Flex, Heading } from "@chakra-ui/react";
 
 import { GetStaticProps } from "next";
 
+import { Continent } from "../@interfaces/continent";
+
 import api from "../services/api";
 
 import { Banner } from "../components/Banner";
@@ -9,25 +11,6 @@ import { Carousel } from "../components/Carousel";
 import { Divider } from "../components/Divider";
 import { Header } from "../components/Header";
 import { TravelTypes } from "../components/TravelTypes";
-
-interface City {
-  name: string;
-  country: string;
-  flagUrl: string;
-  image: string;
-}
-
-interface Continent {
-  id: string;
-  name: string;
-  short_description: string;
-  full_description: string;
-  image: string;
-  citiesOnTheTop100: number;
-  countries: number;
-  languages: number;
-  featuredCities: City[];
-}
 
 interface IHomeProps {
   continents: Continent[];

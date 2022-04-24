@@ -1,24 +1,7 @@
 import { Flex, Grid, Heading, HStack, Text, Tooltip } from "@chakra-ui/react";
 import { FiInfo } from "react-icons/fi";
 
-interface City {
-  name: string;
-  country: string;
-  flagUrl: string;
-  image: string;
-}
-
-interface Continent {
-  id: string;
-  name: string;
-  short_description: string;
-  full_description: string;
-  image: string;
-  citiesOnTheTop100: number;
-  countries: number;
-  languages: number;
-  featuredCities: City[];
-}
+import { Continent } from "../../@interfaces/continent";
 
 interface ContentProps {
   continent: Continent;

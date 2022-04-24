@@ -1,12 +1,7 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { FiInfo } from "react-icons/fi";
 
-interface City {
-  name: string;
-  country: string;
-  flagUrl: string;
-  image: string;
-}
+import { City } from "../../@interfaces/city";
 
 interface CitiesProps {
   cities: City[];
