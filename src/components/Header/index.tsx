@@ -21,17 +21,25 @@ export function Header(): JSX.Element {
       {!isHomePath && (
         <Box w={["16px", "32px"]} justifyContent="flex-start" cursor="pointer">
           <Link href="/">
-            <FiChevronLeft size={"100%"} />
+            <a>
+              <FiChevronLeft size={"100%"} />
+            </a>
           </Link>
         </Box>
       )}
 
-      <Image
-        width={["81px", "184px"]}
-        margin="0 auto"
-        src="/images/logo.svg"
-        alt="logo"
-      />
+      <Flex margin="0 auto">
+        <Link href="/">
+          <a>
+            <Image
+              cursor="pointer"
+              width={["81px", "184px"]}
+              src="/images/logo.svg"
+              alt="logo"
+            />
+          </a>
+        </Link>
+      </Flex>
     </Flex>
   );
 }
